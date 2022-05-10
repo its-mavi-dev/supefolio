@@ -146,11 +146,6 @@ header button:hover {
     transition-property: width, background-color;
 }
 
-
-
-
-
-
 .intelligence {
     width: var(--intelligence);
     animation: intelligenceAnimation 6s 1;
@@ -253,12 +248,6 @@ header button:hover {
     }
 }
 
-
-
-
-
-
-
 .power-div h3 {
     font-family: 'Macondo', cursive;
     letter-spacing: 1px;
@@ -330,6 +319,12 @@ header button:hover {
     line-height: 60px;
     font-size: 16px;
     padding: 40px 0 0 0;
+}
+
+.error-container {
+    font-family: 'Oleo Script', cursive;
+    font-size: 35px;
+    margin: 150px auto;
 }
 
 footer h4 {

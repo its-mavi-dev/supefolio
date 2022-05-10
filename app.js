@@ -10,6 +10,7 @@ app.use(bodyParser.urlencoded({
 }));
 app.use(express.static("public"));
 var inputName = "Spider man";
+const errorString = "Hero Not Found";
 
 app.get("/", function (req, res) {
     const options = {
@@ -27,6 +28,13 @@ app.get("/", function (req, res) {
     axios(options)
         .then(function (response) {
             var d = response.data;
+
+            if (d == errorString) {
+                res.render("error", {});
+                inputName = "Spider man";
+                return;
+            }
+
             var variables = {
                 supeName: d.name,
                 intelligence: d.powerstats.intelligence,

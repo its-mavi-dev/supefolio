@@ -1,144 +1,137 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Supe-folio | API</title>
-    <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon">
-    <link
-      href="https://fonts.googleapis.com/css2?family=Koulen&family=Macondo&family=Oleo+Script&family=Rancho&family=Source+Sans+Pro&display=swap"
-      rel="stylesheet"
-    />
-    <style>
-      :root {
-        --intelligence: <%=intelligence + "%" %>;
-        --strength: <%=strength + "%" %>;
-        --speed: <%=speed + "%" %>;
-        --durability: <%=durability + "%" %>;
-        --power: <%=power + "%" %>;
-        --combat: <%=combat + "%" %>;
-      }
-    </style>
-    <link rel="stylesheet" href="css/styles.css" />
-  </head>
 
-  <body>
-    <header>
-      <h1 class="main-title">Supe-folio</h1>
-      <form action="/" method="post">
-        <div class="form-container">
-          <input
-            required
-            autofocus
-            type="text"
-            placeholder="Search.."
-            id="myInput"
-            name="inputSupeName"
-          />
-        </div>
-      </form>
-    </header>
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Supe-folio | API</title>
+  <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Koulen&family=Macondo&family=Oleo+Script&family=Rancho&family=Source+Sans+Pro&display=swap"
+    rel="stylesheet" />
+  <style>
+    :root {
+      --intelligence: <%=intelligence + "%"%>;
+      --strength: <%=strength + "%"%>;
+      --speed: <%=speed + "%"%>;
+      --durability: <%=durability + "%"%>;
+      --power: <%=power + "%"%>;
+      --combat: <%=combat + "%"%>;
+    }
+  </style>
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
 
-    <div class="main-container">
-      <div class="top-container">
-        <div class="top-name-div">
-          <h1 class="supe-name"><%= supeName %></h1>
-          <div class="power-stats-container">
-            <div class="power-div">
-              <h3 class="power-name">Intelligence</h3>
-              <div class="progress-div">
-                <div class="progress">
-                  <div class="progress-bar intelligence"></div>
-                </div>
-                <span class="power-number-ratio"><%= intelligence %>/100</span>
+<body>
+  <header>
+    <h1 class="main-title">Supe-folio</h1>
+    <form action="/" method="post">
+      <div class="form-container">
+        <input required autofocus type="text" placeholder="Search.." id="myInput" name="inputSupeName" />
+      </div>
+    </form>
+  </header>
+
+  <div class="main-container">
+    <div class="top-container">
+      <div class="top-name-div">
+        <h1 class="supe-name"><%= supeName %></h1>
+        <div class="power-stats-container">
+          <div class="power-div">
+            <h3 class="power-name">Intelligence</h3>
+            <div class="progress-div">
+              <div class="progress">
+                <div class="progress-bar intelligence"></div>
               </div>
+              <span class="power-number-ratio"><%= intelligence %>/100</span>
             </div>
-            <div class="power-div">
-              <h3 class="power-name">Strength</h3>
-              <div class="progress-div">
-                <div class="progress">
-                  <div class="progress-bar strength"></div>
-                </div>
-                <span class="power-number-ratio"><%= strength %>/100</span>
+          </div>
+          <div class="power-div">
+            <h3 class="power-name">Strength</h3>
+            <div class="progress-div">
+              <div class="progress">
+                <div class="progress-bar strength"></div>
               </div>
+              <span class="power-number-ratio"><%= strength %>/100</span>
             </div>
-            <div class="power-div">
-              <h3 class="power-name">Speed</h3>
-              <div class="progress-div">
-                <div class="progress">
-                  <div class="progress-bar speed"></div>
-                </div>
-                <span class="power-number-ratio"><%= speed %>/100</span>
+          </div>
+          <div class="power-div">
+            <h3 class="power-name">Speed</h3>
+            <div class="progress-div">
+              <div class="progress">
+                <div class="progress-bar speed"></div>
               </div>
+              <span class="power-number-ratio"><%= speed %>/100</span>
             </div>
-            <div class="power-div">
-              <h3 class="power-name">Durability</h3>
-              <div class="progress-div">
-                <div class="progress">
-                  <div class="progress-bar durability"></div>
-                </div>
-                <span class="power-number-ratio"><%= durability %>/100</span>
+          </div>
+          <div class="power-div">
+            <h3 class="power-name">Durability</h3>
+            <div class="progress-div">
+              <div class="progress">
+                <div class="progress-bar durability"></div>
               </div>
+              <span class="power-number-ratio"><%= durability %>/100</span>
             </div>
-            <div class="power-div">
-              <h3 class="power-name">Power</h3>
-              <div class="progress-div">
-                <div class="progress">
-                  <div class="progress-bar power"></div>
-                </div>
-                <span class="power-number-ratio"><%= power %>/100</span>
+          </div>
+          <div class="power-div">
+            <h3 class="power-name">Power</h3>
+            <div class="progress-div">
+              <div class="progress">
+                <div class="progress-bar power"></div>
               </div>
+              <span class="power-number-ratio"><%= power %>/100</span>
             </div>
-            <div class="power-div">
-              <h3 class="power-name">Combat</h3>
-              <div class="progress-div">
-                <div class="progress">
-                  <div class="progress-bar combat"></div>
-                </div>
-                <span class="power-number-ratio"><%= combat %>/100</span>
+          </div>
+          <div class="power-div">
+            <h3 class="power-name">Combat</h3>
+            <div class="progress-div">
+              <div class="progress">
+                <div class="progress-bar combat"></div>
               </div>
+              <span class="power-number-ratio"><%= combat %>/100</span>
             </div>
           </div>
         </div>
-        <img src="<%= supeImage %>" alt="<%= supeName %>'s image" />
       </div>
-      <div class="middle-container">
-        <div class="middle-first-div">
-          <h2>Full Name : <%= fullName %></h2>
-          <h2>Place of Birth : <%= placeOfBirth %></h2>
-          <h2>Alignment : <%= alignment %></h2>
-          <h2>Publisher : <%= publisher %></h2>
-        </div>
-        <div class="middle-second-div">
-          <h2>Gender : <%= gender %></h2>
-          <h2>Race : <%= race %></h2>
-          <h2>Eye Color : <%= eyeColor %></h2>
-          <h2>Hair Color : <%= hairColor %></h2>
-        </div>
+      <img src="<%= supeImage %>" alt="<%= supeName %>'s image" />
+    </div>
+    <div class="middle-container">
+      <div class="middle-first-div">
+        <h2>Full Name : <%= fullName %></h2>
+        <h2>Place of Birth : <%= placeOfBirth %></h2>
+        <h2>Alignment : <%= alignment %></h2>
+        <h2>Publisher : <%= publisher %></h2>
       </div>
-      <div class="bottom-container">
-        <div class="alias-title">
-          <h1><%= supeName+"'s " %> Aliases</h1>
-        </div>
-        <div class="alias-name-div">
-          <% for(var i = 0; i < aliasArray.length; i++) { %>
-          <h2><%= aliasArray[i]%></h2>
-          <% } %>
-        </div>
+      <div class="middle-second-div">
+        <h2>Gender : <%= gender %></h2>
+        <h2>Race : <%= race %></h2>
+        <h2>Eye Color : <%= eyeColor %></h2>
+        <h2>Hair Color : <%= hairColor %></h2>
       </div>
     </div>
+    <div class="bottom-container">
+      <div class="alias-title">
+        <h1><%= supeName+"'s " %> Aliases</h1>
+      </div>
+      <div class="alias-name-div">
+        <% for(var i = 0; i < aliasArray.length; i++) { %>
+        <h2><%= aliasArray[i]%></h2>
+        <% } %>
+      </div>
+    </div>
+  </div>
 
-    <footer>
-      <h4>
-        Ⓒ Copyright 2022 | Designed & Coded with fun by
-        <a href="https://its-mavi-dev.netlify.app/" target="_blank">Mahaveer</a
-        >.
-      </h4>
-      <h4>
-        Powered by <a href="https://rapidapi.com/" target="_blank">Rapid-API</a>
-      </h4>
-    </footer>
-    <script src="js/main'js"></script>
-  </body>
+  <footer>
+    <h4>
+      Ⓒ Copyright 2022 | Designed & Coded with fun by
+      <a href="https://its-mavi-dev.netlify.app/" target="_blank">Mahaveer</a>.
+    </h4>
+    <h4>
+      Powered by <a href="https://rapidapi.com/" target="_blank">Rapid-API</a>
+    </h4>
+  </footer>
+  <script src="js/main'js"></script>
+</body>
+
 </html>
